@@ -15,10 +15,16 @@ class Myserver1 extends htmlserver {
     onWrite() {
         fs.writeFile("./Movie.txt", "Big Momma's House is a 2000 crime comedy film, directed by Raja Gosnell, and written by Darryl Quarles and Don Rhymer. The film stars Martin Lawrence as an FBI agent who is tasked with tracking down an escaped convict and their loot, by going undercover as the estranged grandmother of their former girlfriend, unaware of the bond he will form with her. The film also stars Nia Long, Paul Giamatti, and Terrence Howard.", () => { })
     }
+    // onShowData(request, response) {
+    //     fs.readFile("./Movie.txt", (err, result) => {
+    //         if (err) throw err
+    //         response.end(result)
+    //     })
+    // }
     onShowData = (request, response) => {
         readFilePromise("./Movie.txt")
             .then((data) => { response.end(data) })
-            .catch((err) => { response.end("error with info")})
+            .catch((err) => { response.end("error with info") })
     }
 }
 module.exports = new Myserver1;

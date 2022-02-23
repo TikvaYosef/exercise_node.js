@@ -82,7 +82,7 @@
 // const objectEvent2 = require("./exercise9");
 // objectEvent2.emitprint();
 // ==========================================
-// require("./part2/exercise13")
+require("./part2/exercise13")
 // ==========================================
 // require("./part2/exercise15")
 // ==========================================
